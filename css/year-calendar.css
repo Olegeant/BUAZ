@@ -1,0 +1,242 @@
+td::after {
+  font-size: 0.5rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0.05rem;
+  transform: translateX(-50%);
+}
+td:not(.holiday)::after {
+  color: black;
+}
+
+.new-year::after {
+  content: 'Новий Рік';
+}
+.orthodox-xmas::after {
+  content: 'Різдво Христове';
+}
+.baptism::after {
+  content: 'Хрещення господнє';
+}
+.integrity::after {
+  content: 'День Собоності і Свободи України';
+}
+.tetyana::after {
+  content: 'День студента. Тетянин день';
+}
+.int-customs::after {
+  content: 'Міжнародний день митника';
+}
+.int-jeweler::after {
+  content: 'Міжнародний день ювеліра';
+}
+.eight-of-march::after {
+  content: 'Міжнародний жіночий день';
+}
+.first-of-may::after {
+  content: 'День праці';
+}
+.orthodox-easter::after {
+  content: 'Великдень';
+}
+.victory-day::after {
+  content: 'День Перемоги над нацизмом';
+}
+.trinity::after {
+  content: 'Трійця';
+}
+.сonstitution::after {
+  content: 'День Конcтитуції України';
+}
+.independence::after {
+  content: 'День Незaлежності';
+}
+.pokrova::after {
+  content: 'День захисників України';
+}
+.pokrova::after {
+  content: 'День захисників України';
+}
+.xmas::after {
+  content: 'Різдво Христове';
+}
+
+.calendar-nav {
+  position: fixed;
+  right: 2vh;
+  top: 50vh;
+  z-index: 20;
+
+  transform: translateY(-50%);
+}
+.calendar-nav li:not(:last-child) {
+  margin-bottom: 1vh;
+}
+
+.calendar-nav .button {
+  padding: 0.5vh 1vh;
+
+  text-decoration: none;
+  border-radius: 0.75vh;
+  border: 0.2vh solid teal;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: teal;
+
+  font-size: 2.5vh;
+  font-weight: 700;
+  text-align: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calendar-nav .button:hover {
+  background-color: teal;
+  color: white;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.month-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.month-section:nth-child(2n) {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 255, 0.25)
+    ),
+    url(../images/bosal-muffler.jpg);
+}
+
+.month-section:nth-child(2n + 1) {
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(0, 0, 255, 0.25),
+      rgba(0, 0, 0, 0.25),
+      rgba(255, 0, 0, 0.25)
+    ),
+    url(../images/bosal-muffler.jpg);
+}
+
+.calendar-heading {
+  text-transform: uppercase;
+}
+
+.month {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+  box-shadow: 3px 9px 3px rgba(0, 0, 0, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.08),
+    3px 6px 6px rgba(0, 0, 0, 0.12);
+}
+
+.month-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 1px rgba(150, 150, 150, 0.4),
+    1px 1px 2px rgba(150, 150, 150, 0.32), 2px 2px 2px rgba(150, 150, 150, 0.48);
+}
+
+.month-title-red {
+  color: red;
+}
+
+.month-code {
+  position: absolute;
+  right: 3rem;
+}
+
+.month tr:not(.calendar-heading):hover {
+  background-color: rgba(0, 0, 128, 0.15);
+}
+
+.month-section .month td:not(:first-child):hover {
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
+.calendar-heading {
+  background-color: rgba(153, 153, 153, 0.75);
+  color: black;
+  border: 1px solid #999999;
+
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.calendar-heading th:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
+
+.month td {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px solid #999999;
+  color: inherit;
+
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.month tr,
+.month td {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.month td:first-child {
+  color: #999999;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: rgba(0, 128, 128, 0.75);
+  color: white;
+}
+
+.month td:nth-last-child(2) {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: red;
+}
+
+.month td:nth-last-child(1) {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: red;
+}
+
+td.holiday {
+  background-color: rgba(255, 255, 0, 0.05);
+  color: red;
+}
+
+td.not-working {
+  color: red;
+}
+
+td.other-month {
+  color: rgba(153, 153, 153, 0.85);
+  font-size: 2.4rem;
+}
+
+td.other-month:nth-last-child(2),
+td.other-month:nth-last-child(1) {
+  color: black;
+  color: rgba(255, 0, 0, 0.5);
+  font-size: 2.4rem;
+}

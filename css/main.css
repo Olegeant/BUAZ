@@ -1,0 +1,153 @@
+/* General styles*/
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        not supported by any browser */
+}
+
+/* Header styles*/
+
+.site-header {
+  border-bottom: 2px solid rgb(200, 0, 0);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+
+.logo:hover {
+  box-shadow: 2px 2px 2px teal;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 25px 0;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid teal;
+  background-color: white;
+  color: teal;
+}
+
+.bosal {
+  color: red;
+}
+
+.nav-link:hover .button,
+.nav-link.active .button {
+  background-color: teal;
+  color: white;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.nav-link.active::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: teal;
+}
+
+.nav-links .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Footer styles*/
+
+.site-footer {
+  border-top: 2px solid red;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 255, 0.75)
+  );
+}
+
+.copyright {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: default;
+}
+
+.krokodil {
+  position: relative;
+  display: inline-block;
+  padding: 25px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-footer:hover .krokodil {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+.krokodil::before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50px;
+
+  opacity: 0;
+  background-color: white;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/krokodil.png);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-footer:hover .krokodil::before {
+  transform: translateY(-103%);
+  opacity: 1;
+}
+
+/* Стили для Календаря */
+
+.calendar-heading {
+  text-transform: uppercase;
+}
