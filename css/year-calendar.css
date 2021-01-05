@@ -16,18 +16,22 @@ td:not(.holiday)::after {
   content: 'Різдво Христове';
 }
 .baptism::after {
+  white-space: pre;
   content: 'Хрещення господнє';
 }
 .integrity::after {
   content: 'День Собоності і Свободи України';
 }
 .tetyana::after {
+  white-space: pre;
   content: 'День студента. Тетянин день';
 }
 .int-customs::after {
-  content: 'Міжнародний день митника';
+  white-space: pre;
+  content: 'Міжнародний день митниці';
 }
 .int-jeweler::after {
+  white-space: pre;
   content: 'Міжнародний день ювеліра';
 }
 .eight-of-march::after {
@@ -59,6 +63,39 @@ td:not(.holiday)::after {
 }
 .xmas::after {
   content: 'Різдво Христове';
+}
+
+.int-dantist::after {
+  white-space: pre;
+  content: 'Міжнародний день стоматолога';
+}
+
+.int-barmen::after {
+  white-space: pre;
+  content: 'Міжнародний день бармена';
+}
+
+.st-valentine::after {
+  width: 100%;
+  white-space: pre;
+  content: 'День Святого Валентина \0a День комп\0027ютерника';
+}
+
+.foreign-war::after {
+  width: 100%;
+  content: 'День вшанування учасників\0aбойових дій на території інших держав';
+}
+
+.heavenly-hundred::after {
+  width: 100%;
+  white-space: pre;
+  content: 'День пам\0027яті Героїв Небесної Сотні\0aта річниці Майдану';
+}
+
+.pps::after {
+  width: 100%;
+  white-space: pre;
+  content: 'День працівників патрульно-\0aпостової служби України';
 }
 
 .calendar-nav {
@@ -142,6 +179,7 @@ td:not(.holiday)::after {
   border-collapse: collapse;
   text-align: center;
   cursor: default;
+
   background-color: rgba(255, 255, 255, 0.75);
   opacity: 1;
   box-shadow: 3px 9px 3px rgba(0, 0, 0, 0.1), 3px 3px 6px rgba(0, 0, 0, 0.08),
@@ -189,7 +227,8 @@ td:not(.holiday)::after {
 
 .month td {
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 5px;
+  min-width: 125px;
   border: 1px solid #999999;
   color: inherit;
 
@@ -203,11 +242,13 @@ td:not(.holiday)::after {
 }
 
 .month td:first-child {
-  color: #999999;
-  font-size: 2rem;
-  font-weight: 700;
+  min-width: 100px;
+
   background-color: rgba(0, 128, 128, 0.75);
   color: white;
+
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .month td:nth-last-child(2) {
