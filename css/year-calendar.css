@@ -20,7 +20,7 @@ td:not(.holiday)::after {
   content: 'Хрещення господнє';
 }
 .integrity::after {
-  content: 'День Собоності і Свободи України';
+  content: 'День Соборності і Свободи України';
 }
 .tetyana::after {
   white-space: pre;
